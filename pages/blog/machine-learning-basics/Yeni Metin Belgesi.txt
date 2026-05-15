@@ -1,0 +1,69 @@
+---
+title: "Machine Learning Basics: A Beginner's Guide"
+date: "2026-05-13"
+excerpt: "Learn the fundamentals of machine learning, key algorithms, and how they're transforming industries."
+tags: ["Machine Learning", "AI", "Data Science", "Beginners"]
+readingTime: "7 min"
+---
+
+## What is Machine Learning?
+
+Machine Learning is a subset of Artificial Intelligence that enables systems to learn and improve from experience without being explicitly programmed. Instead of following static instructions, ML algorithms use data to identify patterns and make decisions with minimal human intervention.
+
+## The Three Types of Machine Learning
+
+### 1. Supervised Learning
+
+The most common type, where models learn from labeled data. Think of it as learning with a teacher who provides the correct answers.
+
+**Examples:**
+- Email spam detection
+- House price prediction
+- Customer churn prediction
+
+### 2. Unsupervised Learning
+
+Models find patterns in unlabeled data without predefined categories. Like learning without a teacher, discovering hidden structures independently.
+
+**Examples:**
+- Customer segmentation
+- Anomaly detection
+- Recommendation systems
+
+### 3. Reinforcement Learning
+
+Models learn through trial and error, receiving rewards for good actions and penalties for bad ones. Like training a dog with treats!
+
+**Examples:**
+- Game playing AI (AlphaGo)
+- Robotics control
+- Autonomous driving
+
+## Popular ML Algorithms
+
+Here are the most widely used algorithms you should know:
+
+- **Linear Regression** - Predicting continuous values
+- **Logistic Regression** - Binary classification problems  
+- **Decision Trees** - Easy to interpret, great for business rules
+- **Random Forest** - Ensemble method for better accuracy
+- **Neural Networks** - Powering deep learning applications
+- **K-Means Clustering** - Grouping similar data points
+
+## Code Example: Simple Linear Regression
+
+```python
+from sklearn.linear_model import LinearRegression
+import numpy as np
+
+# Sample data
+X = np.array([[1], [2], [3], [4]])
+y = np.array([2, 4, 6, 8])
+
+# Create and train model
+model = LinearRegression()
+model.fit(X, y)
+
+# Make prediction
+prediction = model.predict([[5]])
+print(f"Prediction: {prediction[0]}")  # Output: 10

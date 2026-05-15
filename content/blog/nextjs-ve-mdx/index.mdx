@@ -1,0 +1,32 @@
+---
+title: "Next.js ve MDX ile Modern Blog Kurulumu"
+date: "2026-05-11"
+excerpt: "Next.js, MDX ve Vercel kullanarak süper hızlı bir blog nasıl kurulur? Adım adım anlatıyorum."
+coverImage: "./kapak.jpg"
+tags: ["Next.js", "MDX", "Vercel", "Blog"]
+readingTime: "3 dk"
+---
+
+# Giriş
+
+Merhaba! Bu yazıda **Next.js** ve **MDX** kullanarak nasıl modern bir blog altyapısı kurabileceğinizi anlatacağım.
+
+## Neden MDX?
+
+MDX, Markdown içinde JSX bileşenleri kullanmanıza olanak tanır. Bu sayede:
+
+- 📝 Normal markdown syntax'ı kullanabilirsiniz
+- ⚛️ React bileşenlerini doğrudan yazılarınıza entegre edebilirsiniz
+- 🎨 Daha interaktif ve zengin içerikler oluşturabilirsiniz
+
+## Örnek Kod Bloğu
+
+```javascript
+// next.config.js
+const withMDX = require('@next/mdx')({
+  extension: /\.mdx?$/,
+});
+
+module.exports = withMDX({
+  pageExtensions: ['js', 'jsx', 'mdx'],
+});
